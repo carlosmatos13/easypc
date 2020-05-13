@@ -1,0 +1,44 @@
+include ../partials/header
+
+form(action="/build" method="POST")
+    label(for="CPU") CPU
+    select#cpu(name="cpu")
+        option(value="" disabled selected)
+        each c in cpu
+            option(value=c._id) #{c.brand}
+    label(for="GPU") GPU
+    select#gpu(name="gpu")
+        option(value="" disabled selected)
+        each g in gpu
+            option(value=g._id) #{g.brand}
+    label(for="CASE") CASE
+    select#case(name="case")
+        option(value="" disabled selected)
+        each pccase in pcCase
+            option(value=pccase._id) #{pccase.brand}
+    label(for="RAM") RAM
+    select#case(name="memory")
+        option(value="" disabled selected)
+        each ram in memory
+            option(value=ram._id) #{ram.brand}
+    label(for="Storage") STORAGE
+    select#case(name="storage")
+        option(value="" disabled selected)
+        each strg in storage
+            option(value=strg._id) #{strg.brand}
+    label(for="motherboard") MOTHERBOARD
+    select#case(name="motherboard")
+        option(value="" disabled selected)
+        each board in motherboard
+            option(value=board._id) #{board.brand}
+    label(for="PS") POWER SUPPLY
+    select#case(name="power")
+        option(value="" disabled selected)
+        each ps in power
+            option(value=ps._id) #{ps.brand}
+    button SUBMIT
+        
+
+
+
+include ../partials/footer
